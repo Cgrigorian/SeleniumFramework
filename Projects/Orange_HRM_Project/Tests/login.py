@@ -32,6 +32,7 @@ class LoginTest(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
         self.driver.quit()
+        print("Hello World")
 
 
 if __name__ == '__main__':

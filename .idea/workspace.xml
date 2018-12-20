@@ -36,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Projects/Orange_HRM_Project/Tests/login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="408">
+              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -234,7 +234,7 @@
       <workItem from="1545258741271" duration="910000" />
       <workItem from="1545263870217" duration="4560000" />
       <workItem from="1545313383655" duration="3646000" />
-      <workItem from="1545320281323" duration="2680000" />
+      <workItem from="1545320281323" duration="3266000" />
     </task>
     <task id="LOCAL-00001" summary="Adding change in login test file">
       <created>1545322744168</created>
@@ -279,7 +279,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44711000" />
+    <option name="totallyTimeSpent" value="45297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1608" y="82" width="1616" height="886" extended-state="6" />
@@ -413,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Projects/Orange_HRM_Project/Tests/login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="408">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
