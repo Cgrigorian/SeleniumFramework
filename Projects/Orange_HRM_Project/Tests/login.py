@@ -1,17 +1,17 @@
+from Projects.Orange_HRM_Project.Pages.loginPage import LoginPage
+from Projects.Orange_HRM_Project.Pages.homePage import HomePage
 from selenium import webdriver
 import unittest
 import HtmlTestRunner
 import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
-from Projects.Orange_HRM_Project.Pages.loginPage import LoginPage
-from Projects.Orange_HRM_Project.Pages.homePage import HomePage
 
 
 class LoginTest(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver\
+        self.driver = webdriver \
             .Firefox(executable_path="C:/Users/chris/PycharmProjects/SeleniumFramework/Drivers/geckodriver.exe")
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
