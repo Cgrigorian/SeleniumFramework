@@ -11,7 +11,6 @@ class LoginPage:
     _login_button = """//*[@id="btnLogin"]"""
 
     def enter_username(self, username):
-        # self.driver.find_element(By.ID, self._username_textbox).clear()
         self.driver.find_element(By.XPATH, self._username_textbox).clear()
         self.driver.find_element(By.XPATH, self._username_textbox).send_keys(username)
 
