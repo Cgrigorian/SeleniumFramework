@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 
 
 class HomePage:
@@ -14,15 +15,22 @@ class HomePage:
 
     # Dashboard page
     def at_dashboard_page(self):
-        self.driver.find_element(By.XPATH, self._dashboard_page)
+        if not self.driver.find_element(By.XPATH, self._dashboard_page):
+            print("PASS: Found dashboard page")
+        else:
+            print("FAIL: Dashboard page not found")
 
     # Leave page
-    # TODO: create function to go to leave page
-    def click_dashboard_page(self):
-        self.driver.find_element(By.XPATH, self._dashboard_tab_link).click()
 
+    # Header
     def click_welcome(self):
-        self.driver.find_element(By.XPATH, self._welcome_link).click()
+        if not self.driver.find_element(By.XPATH, self._welcome_link).click():
+            print("PASS: Clicked welcome button")
+        else:
+            print("FAIL: Unable to click welcome button")
 
     def click_logout(self):
-        self.driver.find_element(By.XPATH, self._logout_link).click()
+        if not self.driver.find_element(By.XPATH, self._logout_link).click():
+            print("PASS: Clicked logout button")
+        else:
+            print("FAIL: Unable to click logout button")

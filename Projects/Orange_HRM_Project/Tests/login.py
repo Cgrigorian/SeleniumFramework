@@ -27,8 +27,6 @@ class LoginTest(unittest.TestCase):
 
         homepage = HomePage(driver)
         homepage.at_dashboard_page()
-        # TODO: Go to leave page and go back to dashboard page
-        # homepage.click_dashboard_page()
         homepage.click_welcome()
         homepage.click_logout()
 
