@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
 
 
 class HomePage:
@@ -8,15 +9,16 @@ class HomePage:
 
     _welcome_link = """//*[@id="welcome"]"""
     _logout_link = """//*[contains(text(),'Logout')]"""
-    _dashboard_page = """//h1[contains(text(), 'Dashboard')]"""
+    _dashboard_quick_launch = """//legend[contains(text(), 'Quick Launch')]"""
     _assign_leave_tab_link = """//*[@id="menu_leave_assignLeave"]"""
     _dashboard_tab_link = """//*[@id="menu_dashboard_index"][contains(@href,'/index.php/dashboard')]"""
 
     # Dashboard page
     def at_dashboard_page(self):
-        if not self.driver.find_element(By.XPATH, self._dashboard_page):
+        try:
+            self.driver.find_element(By.XPATH, self._dashboard_quick_launch).is_displayed()
             print("PASS: Found dashboard page")
-        else:
+        except NoSuchElementException:
             print("FAIL: Dashboard page not found")
 
     # Leave page
