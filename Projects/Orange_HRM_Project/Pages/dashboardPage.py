@@ -2,36 +2,32 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
 
-class HomePage:
+class DashboardPage:
 
     def __init__(self, driver):
         self.driver = driver
 
-    _welcome_link = """//*[@id="welcome"]"""
-    _logout_link = """//*[contains(text(),'Logout')]"""
-    _dashboard_quick_launch = """//legend[contains(text(), 'Quick Launch')]"""
-    _assign_leave_tab_link = """//*[@id="menu_leave_assignLeave"]"""
-    _dashboard_tab_link = """//*[@id="menu_dashboard_index"][contains(@href,'/index.php/dashboard')]"""
+    _welcome_button = """//*[@id="welcome"]"""
+    _logout_button = """//*[contains(text(),'Logout')]"""
+    _quick_launch_tab = """//legend[contains(text(), 'Quick Launch')]"""
+    _assign_leave_button = """//*[@id="menu_leave_assignLeave"]"""
 
     # Dashboard page
     def at_dashboard_page(self):
         try:
-            self.driver.find_element(By.XPATH, self._dashboard_quick_launch).is_displayed()
+            self.driver.find_element(By.XPATH, self._quick_launch_tab).is_displayed()
             print("PASS: Found dashboard page")
         except NoSuchElementException:
             print("FAIL: Dashboard page not found")
 
-    # Leave page
-
-    # Header
     def click_welcome(self):
-        if not self.driver.find_element(By.XPATH, self._welcome_link).click():
+        if not self.driver.find_element(By.XPATH, self._welcome_button).click():
             print("PASS: Clicked welcome button")
         else:
             print("FAIL: Unable to click welcome button")
 
     def click_logout(self):
-        if not self.driver.find_element(By.XPATH, self._logout_link).click():
+        if not self.driver.find_element(By.XPATH, self._logout_button).click():
             print("PASS: Clicked logout button")
         else:
             print("FAIL: Unable to click logout button")

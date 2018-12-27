@@ -1,5 +1,5 @@
 from Projects.Orange_HRM_Project.Pages.loginPage import LoginPage
-from Projects.Orange_HRM_Project.Pages.homePage import HomePage
+from Projects.Orange_HRM_Project.Pages.dashboardPage import DashboardPage
 from selenium import webdriver
 import unittest
 import HtmlTestRunner
@@ -25,10 +25,10 @@ class LoginTest(unittest.TestCase):
         login.enter_password("admin123")
         login.click_login()
 
-        homepage = HomePage(driver)
-        homepage.at_dashboard_page()
-        homepage.click_welcome()
-        homepage.click_logout()
+        dashboard = DashboardPage(driver)
+        dashboard.at_dashboard_page()
+        dashboard.click_welcome()
+        dashboard.click_logout()
 
     def tearDown(self):
         self.driver.close()
