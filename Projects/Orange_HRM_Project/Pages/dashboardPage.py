@@ -21,13 +21,15 @@ class DashboardPage:
             print("FAIL: Dashboard page not found")
 
     def click_welcome(self):
-        if not self.driver.find_element(By.XPATH, self._welcome_button).click():
-            print("PASS: Clicked welcome button")
-        else:
+        try:
+            if not self.driver.find_element(By.XPATH, self._welcome_button).click():
+                print("PASS: Clicked welcome button")
+        except NoSuchElementException:
             print("FAIL: Unable to click welcome button")
 
     def click_logout(self):
-        if not self.driver.find_element(By.XPATH, self._logout_button).click():
-            print("PASS: Clicked logout button")
-        else:
+        try:
+            if not self.driver.find_element(By.XPATH, self._logout_button).click():
+                print("PASS: Clicked logout button")
+        except NoSuchElementException:
             print("FAIL: Unable to click logout button")
